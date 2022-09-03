@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project1/pages/login_page.dart';
 
 import 'pages/home_page.dart';
@@ -16,11 +17,13 @@ class myapp extends StatelessWidget {
      // home: HomePage(),//This Work when we donnot add route
      
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.brown ),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        fontFamily: GoogleFonts.lato().fontFamily ),
       darkTheme: ThemeData( 
         brightness: Brightness.dark
       ),
-      initialRoute: "/home",//this is for seting home page as first screen
+     // initialRoute: "/home",//this is for seting home page as first screen
       routes:{
         "/": (context) => new LoginPage(),//here we can also use new key word
         "/home": (context) => HomePage(),
